@@ -41,6 +41,10 @@ body, html{
     color: var(--white);
 }
 
+.colour-grayish-blue{
+    color: var(--grayish-blue);
+}
+
 .pos-relative{
     position: relative;
 }
@@ -51,6 +55,13 @@ body, html{
     color: var(--black);
     margin: 0;
     line-height: 1.5;
+}
+
+.ss-header-3{
+    font-family: var(--font-family-fraunces);
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 3px;
 }
 
 .main-body-text{
@@ -67,6 +78,7 @@ body, html{
 .bolder{
     font-weight: 900;
 }
+
 
 /* utils - end */
 
@@ -192,13 +204,16 @@ body, html{
     justify-content: center;
     flex-direction: column;
     padding-inline: 25%;
+    padding-block: 10%; 
+    min-height: 50vh;
 }
 
 .features-section__image{
     min-height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: cover;
+    padding-block: 10%;
 }
 
 .features-section__egg{
@@ -206,19 +221,31 @@ body, html{
 }
 
 .features-section__cup{
-    background-image: url(images/desktop/image-stand-out.jpg); 
+    background-image: url(images/desktop/image-stand-out.jpg);
 }
 
-.features-section__cherries{
-    background-image: url(images/desktop/image-graphic-design.jpg); 
+.features-section__graphic-design{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    justify-content: flex-end; 
+    align-items: center;
 }
 
-.features-section__orange{
-    background-image: url(images/desktop/image-photography.jpg); 
+.features-section__photography{
+    background-image: url(images/desktop/image-photography.jpg);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text-color-graphic-design{
+    color: var(--graphic-design-text);
+}
+
+.text-color-photography{
+    color: var(--photography-text)
 }
 
 .learn-more{
-    margin-top: 0.75rem;
+    margin-top: 0.75rem; 
     font-family: var(--font-family-fraunces);
     color: var(--black);
     text-decoration: none;
@@ -246,6 +273,15 @@ body, html{
     background-color: var(--soft-red);
 }
 
+.client-testimonials{
+    background-color: var(--white);
+    min-height: 75vh;
+}
+
+.client-testimonials__header{
+    text-align: center;
+    margin-top: 10%;
+}
 
 @media screen and (max-width: 768px){
     .menu{
@@ -283,7 +319,31 @@ body, html{
         align-items: center;
     }
 
-    .features-section__info p{
+    .features-section__info p, .features-section__info h2{
         text-align: center;
+    }
+
+    .features-section > div:nth-child(1){
+        order: 2;
+    }
+
+    .features-section > div:nth-child(2){
+        order: 1;
+    }
+
+    .features-section > div:nth-child(3){
+        order: 3;
+    }
+
+    .features-section > div:nth-child(4){
+        order: 4;
+    }
+
+    .features-section > div:nth-child(5){
+        order: 5;
+    }
+
+    .features-section > div:nth-child(6){
+        order: 6;
     }
 }
